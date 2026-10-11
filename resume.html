@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Maria Kafkala - Resume & Experience</title>
     <style>
-        /* Βασικές Ρυθμίσεις (Ίδιες με την αρχική) */
+        /* Βασικές Ρυθμίσεις */
         body {
             margin: 0;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -30,7 +30,6 @@
             margin: 0 15px;
             font-size: 15px;
         }
-        /* Τώρα το "active" είναι στο Resume */
         nav a.active {
             background-color: #8c6a9f;
             color: white;
@@ -38,7 +37,7 @@
             border-radius: 4px;
         }
 
-        /* Banner του LinkedIn */
+        /* Banner του LinkedIn & Βιογραφικού */
         .linkedin-banner {
             background-color: #eaddf1;
             text-align: center;
@@ -57,6 +56,15 @@
             font-size: 16px;
             margin-bottom: 25px;
         }
+        
+        /* Διάταξη για τα κουμπιά δίπλα-δίπλα */
+        .button-group {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap; /* Για να πηγαίνουν από κάτω σε μικρές οθόνες κινητών */
+        }
+
         .btn-solid {
             display: inline-block;
             background-color: #9263a6;
@@ -66,12 +74,31 @@
             border-radius: 6px;
             font-weight: 500;
             transition: 0.3s;
+            border: 2px solid #9263a6;
         }
         .btn-solid:hover {
             background-color: #7a508f;
+            border-color: #7a508f;
         }
 
-        /* Ενότητες Εμπειρίας (Flexbox για εικόνα-κείμενο) */
+        /* Νέο στυλ για το δεύτερο κουμπί */
+        .btn-outline-purple {
+            display: inline-block;
+            background-color: transparent;
+            color: #9263a6;
+            padding: 10px 30px;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 500;
+            transition: 0.3s;
+            border: 2px solid #9263a6;
+        }
+        .btn-outline-purple:hover {
+            background-color: #9263a6;
+            color: white;
+        }
+
+        /* Ενότητες Εμπειρίας */
         .experience-section {
             display: flex;
             max-width: 1000px;
@@ -80,8 +107,6 @@
             gap: 50px;
             padding: 0 20px;
         }
-        
-        /* Αναστροφή της σειράς για το 2ο block (κείμενο αριστερά, εικόνα δεξιά) */
         .experience-section.reverse {
             flex-direction: row-reverse;
         }
@@ -113,7 +138,7 @@
             line-height: 1.6;
         }
 
-        /* Μικρό Footer κάτω κάτω */
+        /* Footer */
         footer {
             background-color: #4a2b66;
             color: rgba(255, 255, 255, 0.7);
@@ -125,7 +150,6 @@
             align-items: center;
             margin-top: 40px;
         }
-    </footer-content>
     </style>
 </head>
 <body>
@@ -142,7 +166,13 @@
     <section class="linkedin-banner">
         <h1>My LinkedIn Profile</h1>
         <p>Here is my linkedin profile for a more detailed look on my professional history</p>
-        <a href="https://www.linkedin.com/in/maria-kafkala" target="_blank" class="btn-solid">LinkedIn</a>
+        
+        <!-- Εδώ μπήκαν τα δύο κουμπιά -->
+        <div class="button-group">
+            <a href="https://www.linkedin.com/in/maria-kafkala" target="_blank" class="btn-solid">LinkedIn</a>
+            <a href="ΒΙΟΓΡΑΦΙΚΟ_MARIA_KAFKALA.pdf" target="_blank" class="btn-outline-purple">Άνοιγμα Βιογραφικού (PDF)</a>
+        </div>
+
     </section>
 
     <!-- Ενότητα 1: Plaisio -->
@@ -156,7 +186,7 @@
         </div>
     </section>
 
-    <!-- Ενότητα 2: HCI (Reverse Layout) -->
+    <!-- Ενότητα 2: HCI -->
     <section class="experience-section reverse">
         <div class="exp-image">
             <img src="ui.jpg" alt="UI/UX Design">
