@@ -6,166 +6,58 @@
     <title>Maria Kafkala - Portfolio</title>
     <style>
         /* Βασικές Ρυθμίσεις */
-        body {
-            margin: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #fbf9fc;
-        }
-        /* Header & Μενού */
-        header {
-            text-align: center;
-            padding: 30px 20px;
-        }
-        .logo {
-            font-size: 36px;
-            color: #8c6a9f;
-            font-weight: 400;
-            margin-bottom: 20px;
-        }
-        nav a {
-            text-decoration: none;
-            color: #777;
-            margin: 0 15px;
-            font-size: 15px;
-        }
-        nav a.active {
-            background-color: #8c6a9f;
-            color: white;
-            padding: 8px 16px;
-            border-radius: 4px;
-        }
+        body { margin: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #fbf9fc; }
+        header { text-align: center; padding: 30px 20px; }
+        .logo { font-size: 36px; color: #8c6a9f; font-weight: 400; margin-bottom: 20px; }
+        nav a { text-decoration: none; color: #777; margin: 0 15px; font-size: 15px; }
+        nav a.active { background-color: #8c6a9f; color: white; padding: 8px 16px; border-radius: 4px; }
         
         /* Ενότητα "Get to know me" */
-        .hero {
-            display: flex;
-            max-width: 1100px;
-            margin: 40px auto 60px;
-            padding: 0 20px;
-            align-items: center;
-            gap: 50px;
-        }
-        .hero-text {
-            flex: 1;
-        }
-        .hero-text h1 {
-            color: #8c6a9f;
-            font-size: 48px;
-            font-weight: 400;
-            margin-bottom: 15px;
-        }
-        .hero-text p {
-            color: #666;
-            line-height: 1.6;
-            font-size: 16px;
-        }
-        .btn-outline {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 10px 24px;
-            border: 2px solid #8c6a9f;
-            color: #8c6a9f;
-            text-decoration: none;
-            border-radius: 6px;
-            font-weight: 500;
-            transition: 0.3s;
-        }
-        .btn-outline:hover {
-            background-color: #8c6a9f;
-            color: white;
-        }
+        .hero { display: flex; max-width: 1100px; margin: 40px auto 60px; padding: 0 20px; align-items: center; gap: 50px; }
+        .hero-text { flex: 1; }
+        .hero-text h1 { color: #8c6a9f; font-size: 48px; font-weight: 400; margin-bottom: 15px; }
+        .hero-text p { color: #666; line-height: 1.6; font-size: 16px; }
+        .btn-outline { display: inline-block; margin-top: 20px; padding: 10px 24px; border: 2px solid #8c6a9f; color: #8c6a9f; text-decoration: none; border-radius: 6px; font-weight: 500; transition: 0.3s; }
+        .btn-outline:hover { background-color: #8c6a9f; color: white; }
         
-        .hero-image-box {
-            flex: 1;
-            height: 450px;
-            border-radius: 10px;
-            overflow: hidden;
-        }
-        .hero-image-box img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
+        .hero-image-box { flex: 1; height: 450px; border-radius: 10px; overflow: hidden; }
+        .hero-image-box img { width: 100%; height: 100%; object-fit: cover; }
 
-        /* --- Η ΚΑΜΠΥΛΗ --- */
-        .purple-section {
-            background-color: #9263a6;
-            padding: 120px 20px 80px;
-            color: white;
-            text-align: center;
-            position: relative;
-        }
-        .custom-shape-divider-top {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            overflow: hidden;
-            line-height: 0;
-        }
-        .custom-shape-divider-top svg {
-            position: relative;
-            display: block;
-            width: calc(100% + 1.3px);
-            height: 70px;
-        }
-        .custom-shape-divider-top .shape-fill {
-            fill: #fbf9fc;
-        }
+        /* --- Η ΚΑΜΠΥΛΗ & ΜΩΒ ΕΝΟΤΗΤΑ --- */
+        .purple-section { background-color: #9263a6; padding: 120px 20px 80px; color: white; text-align: center; position: relative; }
+        .custom-shape-divider-top { position: absolute; top: 0; left: 0; width: 100%; overflow: hidden; line-height: 0; }
+        .custom-shape-divider-top svg { position: relative; display: block; width: calc(100% + 1.3px); height: 70px; }
+        .custom-shape-divider-top .shape-fill { fill: #fbf9fc; }
 
         /* --- Κάρτες (Projects & Resume) --- */
-        .cards-container {
-            display: flex;
-            max-width: 1100px;
-            margin: 40px auto 0;
-            gap: 40px;
-            justify-content: center;
+        .cards-container { 
+            display: flex; 
+            flex-direction: row; /* Εδώ κλειδώνουμε το "δίπλα-δίπλα" */
+            max-width: 1100px; 
+            margin: 40px auto 0; 
+            gap: 40px; 
+            justify-content: center; 
         }
-        .card {
-            flex: 1;
-            text-align: left;
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            border-radius: 8px;
-            padding: 20px;
+        .card { 
+            flex: 1; 
+            text-align: left; 
+            border: 1px solid rgba(255, 255, 255, 0.3); 
+            border-radius: 8px; 
+            padding: 20px; 
+            min-width: 300px; /* Βοηθάει να μην σπάνε οι κάρτες */
         }
-        .card img {
-            width: 100%;
-            height: 300px;
-            object-fit: cover;
-            border-radius: 6px;
-            margin-bottom: 20px;
-        }
-        .card h3 {
-            font-size: 26px;
-            font-weight: 400;
-            margin: 0 0 10px 0;
-        }
-        .card p {
-            font-size: 15px;
-            color: #f1f1f1;
-            margin-bottom: 20px;
-            line-height: 1.5;
-        }
-        .btn-white {
-            display: inline-block;
-            padding: 8px 20px;
-            background-color: white;
-            color: #9263a6;
-            text-decoration: none;
-            border-radius: 4px;
-            font-weight: 500;
-        }
+        .card img { width: 100%; height: 300px; object-fit: cover; border-radius: 6px; margin-bottom: 20px; }
+        .card h3 { font-size: 26px; font-weight: 400; margin: 0 0 10px 0; }
+        .card p { font-size: 15px; color: #f1f1f1; margin-bottom: 20px; line-height: 1.5; }
+        .btn-white { display: inline-block; padding: 8px 20px; background-color: white; color: #9263a6; text-decoration: none; border-radius: 4px; font-weight: 500; }
 
         /* --- Footer --- */
-        footer {
-            background-color: #4a2b66;
-            color: rgba(255, 255, 255, 0.7);
-            text-align: left;
-            padding: 30px 40px;
-            font-size: 14px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            /* Σε αυτή τη σελίδα δεν έβαλα margin-top ώστε το σκούρο μωβ να "κολλήσει" τέλεια κάτω από το ανοιχτό μωβ section */
+        footer { background-color: #4a2b66; color: rgba(255, 255, 255, 0.7); text-align: left; padding: 30px 40px; font-size: 14px; display: flex; justify-content: space-between; align-items: center; }
+
+        /* Responsive για κινητά (ώστε στα κινητά να μπαίνουν σωστά η μία κάτω από την άλλη) */
+        @media (max-width: 768px) {
+            .cards-container { flex-direction: column; }
+            .hero { flex-direction: column; }
         }
     </style>
 </head>
@@ -176,7 +68,7 @@
         <nav>
             <a href="index.html" class="active">Home</a>
             <a href="resume.html">Resume & Experience</a>
-            <a href="portofolio.html">Project Portfolio</a>
+            <a href="portfolio.html">Project Portfolio</a>
         </nav>
     </header>
 
@@ -184,7 +76,7 @@
         <div class="hero-text">
             <h1>Get to know me!!!</h1>
             <p>Hi my name is Maria Kafkala, i am 22 years old and i study Computer Science at UOA. My favorite colour is purple and i want expand my knowledge in web development, eager to learn modern frameworks, build intuitive user experiences, and continuously grow as a developer!!!</p>
-            <a href="portofolio.html" class="btn-outline" >Project Portfolio</a>
+            <a href="portfolio.html" class="btn-outline">View projects</a>
         </div>
         <div class="hero-image-box">
             <img src="profilepic.jpg" alt="Maria Kafkala">
@@ -204,21 +96,20 @@
                 <img src="vr.jpg" alt="VR Project">
                 <h3>M110 Projects and Assignments</h3>
                 <p>Here you will find my submissions for the M110 course!</p>
-                <a href="portofolio.html" class="btn-white" >Project Portfolio</a
+                <!-- Το link πλέον σε πάει στη σελίδα των Projects -->
+                <a href="portfolio.html" class="btn-white">Project Portfolio</a>
             </div>
 
             <div class="card">
                 <img src="plaisio.jpg" alt="Work Experience">
                 <h3>My resume</h3>
                 <p>Here you're gonna find my resume and my linkedin profile!</p>
-                <!-- Το link ενημερώθηκε για να πηγαίνει στη σελίδα του Resume -->
                 <a href="resume.html" class="btn-white">Resume & Experience</a>
             </div>
         </div>
 
     </section>
 
-    <!-- Προσθήκη του Footer στο τέλος της σελίδας -->
     <footer>
         <div>© 2026 Maria Kafkala</div>
     </footer>
