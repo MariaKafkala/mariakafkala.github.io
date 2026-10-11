@@ -80,20 +80,19 @@
             border-radius: 10px;
             overflow: hidden;
         }
-        /* Εδώ θα φορτώσει η φωτογραφία profile.jpg */
         .hero-image-box img {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
 
-        /* --- Η ΔΙΟΡΘΩΜΕΝΗ ΚΑΜΠΥΛΗ --- */
+        /* --- Η ΚΑΜΠΥΛΗ --- */
         .purple-section {
             background-color: #9263a6;
-            padding: 120px 20px 80px; /* Μεγάλο padding-top για να έχει χώρο η καμπύλη */
+            padding: 120px 20px 80px;
             color: white;
             text-align: center;
-            position: relative; /* Η καμπύλη τοποθετείται απολύτως μέσα σε αυτό το section */
+            position: relative;
         }
         .custom-shape-divider-top {
             position: absolute;
@@ -110,7 +109,7 @@
             height: 70px;
         }
         .custom-shape-divider-top .shape-fill {
-            fill: #fbf9fc; /* Το χρώμα της πάνω λευκής σελίδας για τέλειο blending */
+            fill: #fbf9fc;
         }
 
         /* --- Κάρτες (Projects & Resume) --- */
@@ -175,15 +174,12 @@
             <a href="#" class="btn-outline">View projects</a>
         </div>
         <div class="hero-image-box">
-            <!-- Εδώ καλείται η φωτογραφία σου! -->
-            <img src="profile.jpg" alt="Maria Kafkala">
+            <img src="profilepic.jpg" alt="Maria Kafkala">
         </div>
     </section>
 
-    <!-- Μωβ ενότητα με ενσωματωμένη καμπύλη -->
     <section class="purple-section">
         
-        <!-- Το SVG της καμπύλης -->
         <div class="custom-shape-divider-top">
             <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
                 <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" class="shape-fill"></path>
@@ -191,7 +187,6 @@
         </div>
 
         <div class="cards-container">
-            <!-- Κάρτα 1: M110 -->
             <div class="card">
                 <img src="vr.jpg" alt="VR Project">
                 <h3>M110 Projects and Assignments</h3>
@@ -199,7 +194,6 @@
                 <a href="#" class="btn-white">M110 Projects</a>
             </div>
 
-            <!-- Κάρτα 2: Resume -->
             <div class="card">
                 <img src="plaisio.jpg" alt="Work Experience">
                 <h3>My resume</h3>
@@ -211,4 +205,4 @@
     </section>
 
 </body>
-</html>σ
+</html>
