@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maria Kafkala - Project Portfolio</title>
+    <style>
+        /* Βασικές Ρυθμίσεις */
+        body { margin: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #fbf9fc; }
+        header { text-align: center; padding: 30px 20px; background-color: #fbf9fc; }
+        .logo { font-size: 36px; color: #8c6a9f; font-weight: 400; margin-bottom: 20px; }
+        nav a { text-decoration: none; color: #777; margin: 0 15px; font-size: 15px; }
+        nav a.active { background-color: #8c6a9f; color: white; padding: 8px 16px; border-radius: 4px; }
+
+        /* Banner Εισαγωγής */
+        .portfolio-banner {
+            background-color: #f2e8f6;
+            padding: 60px 20px;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        .portfolio-banner h1 {
+            color: #8c6a9f;
+            font-size: 36px;
+            font-weight: 400;
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+        .portfolio-banner p {
+            color: #666;
+            font-size: 16px;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        /* Ενότητα Αρχείου Εργασιών */
+        .archive-section {
+            max-width: 1100px;
+            margin: 0 auto 80px;
+            padding: 0 20px;
+        }
+        .archive-section h2 {
+            color: #8c6a9f;
+            font-size: 30px;
+            font-weight: 400;
+            text-align: center;
+            margin-bottom: 40px;
+            border-bottom: 1px dotted #ccc;
+            padding-bottom: 20px;
+        }
+
+        /* Πλέγμα (Grid) για τις κάρτες των εργασιών */
+        .assignments-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        /* Κάρτα Εργασίας */
+        .assignment-card {
+            background-color: white;
+            border: 1px solid #eee;
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+            transition: transform 0.2s, box-shadow 0.2s;
+            display: flex;
+            flex-direction: column;
+        }
+        .assignment-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+        }
+        .assignment-card h3 {
+            color: #4a2b66;
+            margin-top: 0;
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+        .assignment-card .date {
+            color: #9263a6;
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 15px;
+            display: block;
+        }
+        .assignment-card p {
+            color: #666;
+            font-size: 15px;
+            line-height: 1.6;
+            margin-bottom: 25px;
+            flex-grow: 1; /* Σπρώχνει το κουμπί πάντα στο κάτω μέρος */
+        }
+        .btn-download {
+            display: inline-block;
+            background-color: #9263a6;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 15px;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+        .btn-download:hover {
+            background-color: #7a508f;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #4a2b66;
+            color: rgba(255, 255, 255, 0.7);
+            text-align: left;
+            padding: 30px 40px;
+            font-size: 14px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">MK Maria Kafkala</div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="resume.html">Resume & Experience</a>
+            <a href="portfolio.html" class="active">Project Portfolio</a>
+        </nav>
+    </header>
+
+    <section class="portfolio-banner">
+        <h1>Project portfolio & course assignments</h1>
+        <p>Welcome to my academic and project management portfolio. This dedicated space serves as an archive for my projects from the M110 course!!</p>
+    </section>
+
+    <section class="archive-section">
+        <h2>Recent coursework & project archive</h2>
+        
+        <div class="assignments-grid">
+            
+            <!-- ====== ΑΡΧΗ ΕΡΓΑΣΙΑΣ (Αντίγραψε αυτό το κομμάτι κάθε φορά) ====== -->
+            <div class="assignment-card">
+                <h3>Assignment 1: Title of Project</h3>
+                <span class="date">October 2026</span>
+                <p>Μια σύντομη περιγραφή του τι αφορούσε η εργασία. Τι εργαλεία χρησιμοποίησες και ποιο ήταν το τελικό παραδοτέο που ζητήθηκε από τις καθηγήτριες.</p>
+                <!-- Βάλε το όνομα του PDF της εργασίας στο href -->
+                <a href="onoma_ergasias_1.pdf" target="_blank" class="btn-download">Άνοιγμα Εργασίας (PDF)</a>
+            </div>
+            <!-- ====== ΤΕΛΟΣ ΕΡΓΑΣΙΑΣ ====== -->
+
+            <!-- Παράδειγμα 2ης Κάρτας για να δεις πώς φαίνονται δίπλα-δίπλα -->
+            <div class="assignment-card">
+                <h3>Assignment 2: UI/UX Case Study</h3>
+                <span class="date">November 2026</span>
+                <p>Έρευνα πάνω στην αλληλεπίδραση ανθρώπου-υπολογιστή. Περιλαμβάνει την ανάλυση και τα διαγράμματα της ομάδας.</p>
+                <a href="#" target="_blank" class="btn-download">Άνοιγμα Εργασίας (PDF)</a>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <div>© 2026 Maria Kafkala</div>
+    </footer>
+
+</body>
+</html>
