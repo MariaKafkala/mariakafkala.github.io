@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maria Kafkala - Resume & Experience</title>
+    <style>
+        /* Βασικές Ρυθμίσεις (Ίδιες με την αρχική) */
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #fbf9fc;
+        }
+        
+        /* Header & Μενού */
+        header {
+            text-align: center;
+            padding: 30px 20px;
+            background-color: #fbf9fc;
+        }
+        .logo {
+            font-size: 36px;
+            color: #8c6a9f;
+            font-weight: 400;
+            margin-bottom: 20px;
+        }
+        nav a {
+            text-decoration: none;
+            color: #777;
+            margin: 0 15px;
+            font-size: 15px;
+        }
+        /* Τώρα το "active" είναι στο Resume */
+        nav a.active {
+            background-color: #8c6a9f;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 4px;
+        }
+
+        /* Banner του LinkedIn */
+        .linkedin-banner {
+            background-color: #eaddf1;
+            text-align: center;
+            padding: 60px 20px;
+            margin-bottom: 60px;
+        }
+        .linkedin-banner h1 {
+            color: #8c6a9f;
+            font-size: 40px;
+            font-weight: 400;
+            margin-bottom: 15px;
+            margin-top: 0;
+        }
+        .linkedin-banner p {
+            color: #666;
+            font-size: 16px;
+            margin-bottom: 25px;
+        }
+        .btn-solid {
+            display: inline-block;
+            background-color: #9263a6;
+            color: white;
+            padding: 10px 30px;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+        .btn-solid:hover {
+            background-color: #7a508f;
+        }
+
+        /* Ενότητες Εμπειρίας (Flexbox για εικόνα-κείμενο) */
+        .experience-section {
+            display: flex;
+            max-width: 1000px;
+            margin: 0 auto 80px;
+            align-items: center;
+            gap: 50px;
+            padding: 0 20px;
+        }
+        
+        /* Αναστροφή της σειράς για το 2ο block (κείμενο αριστερά, εικόνα δεξιά) */
+        .experience-section.reverse {
+            flex-direction: row-reverse;
+        }
+
+        .exp-image {
+            flex: 1;
+        }
+        .exp-image img {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .exp-text {
+            flex: 1;
+        }
+        .exp-text h2 {
+            color: #8c6a9f;
+            font-size: 32px;
+            font-weight: 400;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        .exp-text p {
+            color: #666;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        /* Μικρό Footer κάτω κάτω */
+        footer {
+            background-color: #4a2b66;
+            color: rgba(255, 255, 255, 0.7);
+            text-align: left;
+            padding: 30px 40px;
+            font-size: 14px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 40px;
+        }
+    </footer-content>
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">MK Maria Kafkala</div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="resume.html" class="active">Resume & Experience</a>
+            <a href="#">Project Portfolio</a>
+        </nav>
+    </header>
+
+    <section class="linkedin-banner">
+        <h1>My LinkedIn Profile</h1>
+        <p>Here is my linkedin profile for a more detailed look on my professional history</p>
+        <a href="https://www.linkedin.com/in/maria-kafkala" target="_blank" class="btn-solid">LinkedIn</a>
+    </section>
+
+    <!-- Ενότητα 1: Plaisio -->
+    <section class="experience-section">
+        <div class="exp-image">
+            <img src="plaisio2.jpg" alt="Plaisio Computers Experience">
+        </div>
+        <div class="exp-text">
+            <h2>Work experience: Plaisio<br>Computers</h2>
+            <p>Working in retail sales for two years taught me how to communicate effectively under pressure, identify client needs rapidly, and take initiative within a team setting. This practical foundation shaped my organised and methodical approach to managing projects.</p>
+        </div>
+    </section>
+
+    <!-- Ενότητα 2: HCI (Reverse Layout) -->
+    <section class="experience-section reverse">
+        <div class="exp-image">
+            <img src="ui.jpg" alt="UI/UX Design">
+        </div>
+        <div class="exp-text">
+            <h2>Academic foundation: HCI &<br>design</h2>
+            <p>My studies in human-computer interaction (HCI) sparked a strong dedication to designing modern, accessible web applications. Combining technical project skills with thoughtful UI design ensures every system is both productive and user-friendly.</p>
+        </div>
+    </section>
+
+    <footer>
+        <div>© 2026 Maria Kafkala</div>
+    </footer>
+
+</body>
+</html>
